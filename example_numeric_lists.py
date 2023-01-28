@@ -139,9 +139,11 @@ avg = sum / len
 
 # Return a new list soreted in ascending order
 asc_scores = sorted(score_list)
+print(asc_scores)
 
 # Return a new list soreted in descending order
 desc_scores = sorted(score_list, reverse=True)
+print(desc_scores)
 
 
 """
@@ -170,29 +172,43 @@ copy(): Return a shallow copy of the list.
 """
 
 # append an item to the end of the list
-lst = [1, 2, 3]
-lst.append(4)
+list1 = [1, 2, 3]
+list1.append(4)
+print(list1) # testing
 
 # extend the list with another list
-lst.extend([4, 5, 6])
+list1.extend([4, 5, 6])
+print(list1) # testing
 
 # insert an item at a given position (0 = first item)
 i = 0
 newvalue = 42
-lst.insert(i, newvalue)
+list1.insert(i, newvalue)
+print(list1) # testing
 
 # remove an item
 item_to_remove = 42
-lst.remove(item_to_remove)
+list1.remove(item_to_remove)
+print(list1) # testing
 
 # Count how many times 111 appears in the list
 ct_of_111 = score_list.count(111)
+print(ct_of_111) # testing - great way to look for frequency in a list
+
+ratio_111_to_all = float(ct_of_111 / len) # calculating ratio of 111 to all numbers in score_list
+print(ratio_111_to_all)
+
+perc_111_of_list = ratio_111_to_all * 100
+print(f'Integer 111 makes up {perc_111_of_list}% of the score_list!') # calculating percentage that 111 integer is of score_list
+                                                                      # count function will be invalueable! Kinda like in SQL.
 
 # Sort the list in ascending order using the sort() method
 asc_scores2 = score_list.sort()
+print(asc_scores2)
 
 # Sort the list in descending order using the sort() method
 desc_scores2 = score_list.sort(reverse=True)
+print(desc_scores2)
 
 # Copy the list to a new list
 new_scores = score_list.copy()
@@ -201,6 +217,7 @@ new_scores = score_list.copy()
 # The first item in a list is at index 0
 # Think of it as an offset from the beginning of the list
 first = new_scores.pop(0)
+print(first)
 
 # Remove the last item from the new list
 # The last item in a list is at index -1
@@ -223,6 +240,7 @@ print(new_scores)
 # Say "keep x such that x > 100 is True" given new_scores
 # Cast the result using square brackets to get a list
 scores_over_100 = [filter(lambda x: x > 100, new_scores)]
+print(scores_over_100)
 
 # Use the built-in function map() anywhere you need to transfrom
 
@@ -230,10 +248,12 @@ scores_over_100 = [filter(lambda x: x > 100, new_scores)]
 # Say "map x to x squared" given new_scores
 # Cast the result using square brackets to get a list
 doubled_scores = [map(lambda x: x * 2, new_scores)]
+print(doubled_scores)
 
 # Map each element to its square root
 # Say "map x to the square root of x" and cast to a list
 sqrt_scores = map(lambda x: math.sqrt(x), new_scores)
+print(sqrt_scores)
 
 # Map each element (radius) to its area
 radius_list = [1, 2, 3, 4, 5]
