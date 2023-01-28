@@ -127,16 +127,16 @@ print()
 print('Lists 5 -- list transformations (filter and map)')
 print('------------------------------------------------')
 employee_ids = list(range(1001, 1021))
-print(employee_ids)
+print(f'List of 20 employee IDs: {employee_ids}')
 
 first_10_employees = list(filter(lambda x: x < 1011, employee_ids))
-print(first_10_employees)
+print(f'Filtered list to first 10 employees: {first_10_employees}')
 
 cbrt_employee_ids = list(map(lambda x: x ** (1/3), employee_ids))   
-print(cbrt_employee_ids)
+print(f'Cube root of list: {cbrt_employee_ids}')
                                                             # cube and volume doesn't make sense on employee IDs, but practicing the logic anyway.
 volume_employee_ids = list(map(lambda x: x ** 3, employee_ids))
-print(volume_employee_ids)
+print(f'Cube of list: {volume_employee_ids}')
 
 
 ## Lists 6 -- list transformations (list comprehension)
