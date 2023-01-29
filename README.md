@@ -1,3 +1,15 @@
+Eric Meyer
+Data Analytics Fundamentals Project 3
+Domain: Human Resources
+
+The goal of this project is to gain skills with:
+- Lists
+- Tuples
+- Sets
+- List Comprehensions
+- Filtering
+- Mapping
+
 # datafun-03-datatypes
 
 > Practice with Python data types, filter(), map(), and list comprehensions
